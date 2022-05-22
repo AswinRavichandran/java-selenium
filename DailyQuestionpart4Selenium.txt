@@ -1,0 +1,71 @@
+1) What is Selenium? What are the different Selenium components? Explain about Selenium Webdriver.
+	Selenium is used to automate web application.
+	Selenium is not used for desktop base application automation i.e., games, calculator etc..
+Components of Selenium:
+Selenium IDE
+Selenium RC
+ Selenium WebDriver
+Selenium Grid
+Selenium Webdriver:
+              Selenium webdriver is better than IDE and RC.
+              Selenium webdriver is more stable than RC.
+              It controls the browser by directly communicating with it.
+              It also supports multiple programming languages.
+
+2) How does Selenium communicate with the Web browsers?
+	Selenium webdriver is a tool that helps selenium to interact with the various web browsers. 
+	Every browser has a separate webdriver to communicate.
+
+3.What are the locators available  to find an element using Selenium?
+	 There are about 8 locators available in selenium :
+              ID
+              Class Name
+              TagName
+              LinkText
+              Class
+              Partial LinkText
+              Xpath
+              CSS selector
+
+4. Why ID is preferable than X-Path?
+	ID is considered as unique key so there cannot be more than 1 elements for same ID while Xpath is created using relative path/position of elements, 
+so there can be cases when we can get 2 or more elements for same Xpath.
+
+5.How to select value in dropdown?
+	* Find the drop down using FindElement
+      * Create object for select class passing dropdown element as parameter
+      * Select the value from dropdown values
+methods in select class:
+      *selectByIndex(int index)
+      *selectByValue(String value)
+      *selectByVisibleText(String Text)
+      *getOptions( )
+      *getFirstSelectedOption ( )
+      *getAllSelectedOptions( )
+      *isMultiple( )
+      *deSelectByValue (String value)
+      *deselectByIndex(int Index)
+      *deselectByVisibleText (String text)
+      * deselectAll( )
+
+6) What is the difference between Absolute Path and Relative Path?
+	Absolute xpath: It uses complete path from the root element to a desired element.
+        Relative xpath: You can simply start by referencing the element you want and go from there.
+
+7) How to verify if the given check box is checked or not (it is not taught but you can explore) Try here: http://leafground.com/pages/checkbox.html
+		In order to check if a checkbox is checked or unchecked, we can used the isSelected() method over the checkbox element. 
+		The isSelected() method returns a boolean value of true if the checkbox is checked false otherwise.
+
+8)Difference between System.setProperty and WebDriverManager
+	WebDriverManager automates the browser setup in the Selenium code. By default, 
+it downloads the latest version of the browser binary and also the binary for the appropriate platform.
+	setProperty method is used to configure the browser driver path.
+
+9) Write the syntax for preceding and following x-paths.
+following:
+           Xpath=//*[@attribute='value']//following:: input
+preceeding:
+	   Xpath= //*[@attribute='value']//preceding::input
+
+10) How to get an attribute value using Selenium WebDriver?
+	The getAttribute() method helps to get the value of any attribute of a web element, which is returned as a String.
